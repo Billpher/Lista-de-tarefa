@@ -4,6 +4,10 @@ $(document).ready(function() {
         e.preventDefault();
         
         adicionarTarefa();
+
+        $('li').click(function() {
+            $('a').css({"text-decoration":'line-through'})
+        })
     })
 
     function adicionarTarefa() {
@@ -17,10 +21,5 @@ $(document).ready(function() {
         $(novaTarefa).appendTo(`ul`);
 
         $('#tarefa').val(' ');
-
-        $('li').click(function() {
-            $('a').css({"text-decoration":'line-through'})
-        })
-        
     }
 })
